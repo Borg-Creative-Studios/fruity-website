@@ -1018,63 +1018,17 @@ a {
     opacity: 1;
   }
 }
-.cid-rY4Yax6xcB {
-  padding-top: 30px;
-  padding-bottom: 45px;
-  background-color: #ffffff;
+#custom-html-l {
+  /* Type valid CSS here */
 }
-.cid-rY4Yax6xcB h4 {
-  font-weight: 500;
-  margin-bottom: 0;
-  text-align: left;
-}
-.cid-rY4Yax6xcB p {
-  color: #767676;
-  text-align: left;
-}
-.cid-rY4Yax6xcB .card-wrapper {
-  height: 100%;
-}
-.cid-rY4Yax6xcB .container-fluid {
-  max-width: 1600px;
-}
-.cid-rY4Yax6xcB .card-img {
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-.cid-rY4Yax6xcB img {
-  object-fit: cover;
-  height: 100%;
-  transition: all 0.3s;
-}
-.cid-rY4Yax6xcB .mbr-iconfont {
-  position: absolute;
-  font-size: 1.8rem;
-  color: #ffffff;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s;
-  opacity: 0;
-  z-index: 2;
-}
-.cid-rY4Yax6xcB .card:hover img {
-  filter: blur(3px);
-}
-.cid-rY4Yax6xcB .card:hover .mbr-iconfont {
-  opacity: 1;
-}
-.cid-rY4Yax6xcB .title {
+#custom-html-l div {
+  padding: 80px 0;
+  color: #777;
   text-align: center;
 }
-@media (max-width: 767px) {
-  .cid-rY4Yax6xcB .mbr-iconfont {
-    opacity: 1;
-  }
-  .cid-rY4Yax6xcB img {
-    filter: blur(3px);
-  }
+#custom-html-l p {
+  font-size: 60px;
+  color: #777;
 }
 .cid-rXL0JGkcIY {
   background-image: url("../../../assets/images/background1.jpg");
