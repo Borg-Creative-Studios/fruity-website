@@ -1030,6 +1030,70 @@ a {
   font-size: 20px;
   color: #777;
 }
+#custom-html-m {
+  /* Type valid CSS here */
+  /* WRAPPER */
+  /* TICKER ANIMATION */
+  /* ITEMS */
+}
+#custom-html-m .tickerv-wrap {
+  background: #eee;
+  box-sizing: content-box;
+  height: 50px;
+  /* Take note of this */
+  overflow: hidden;
+  /* Hide scrollbars */
+  padding: 10px;
+}
+@keyframes tickerv {
+  0% {
+    margin-top: 0;
+  }
+  /* Quite literally -ve height of wrapper */
+  25% {
+    margin-top: -26px;
+  }
+  /* 1 X 25 px */
+  50% {
+    margin-top: -52px;
+  }
+  /* 2 X 25 px */
+  75% {
+    margin-top: -78px;
+  }
+  /* 3 X 25 px */
+  100% {
+    margin-top: 0;
+  }
+  /* Back to first line */
+}
+#custom-html-m .tickerv-wrap ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  animation-name: tickerv;
+  /* Loop through items */
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0.5, 0);
+}
+#custom-html-m .tickerv-wrap ul:hover {
+  /* Pause on mouse hover */
+  animation-play-state: paused;
+}
+#custom-html-m .tickerv-wrap ul li {
+  border-bottom: solid;
+  border-color: #cecece;
+  font-size: 25px;
+  line-height: 26px /* Same as wrapper height */;
+}
+#custom-html-m p {
+  font-size: 60px;
+  color: #777;
+}
+#custom-html-m div {
+  margin-bottom: 10mm;
+}
 .cid-rXL0JGkcIY {
   background-image: url("../../../assets/images/background1.jpg");
 }
