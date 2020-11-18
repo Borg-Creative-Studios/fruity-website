@@ -490,245 +490,6 @@
         }
       ]
     },
-    "page1.html": {
-      "settings": {
-        "title": "fruity-main",
-        "meta_descr": "",
-        "header_custom": "",
-        "footer_custom": "",
-        "html_before": "",
-        "order": 2
-      },
-      "components": [
-        {
-          "alias": "mobirise4-blocks/components",
-          "_isSecondary": true,
-          "typeCompatible": "type",
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-section-title,.mbr-section-subtitle": {
-              "color": "#000000"
-            },
-            ".mbr-section-text": {
-              "color": "#232323"
-            },
-            ".mbr-text,.typed-text,.mbr-section-text": {
-              "letter-spacing": "0.03rem"
-            },
-            ".btn": {
-              "margin-left": "4px !important"
-            },
-            ".animated-element": {
-              "color": "@wordsColor"
-            },
-            ".typed-cursor": {
-              "opacity": "1",
-              "-webkit-animation": "blink 0.7s infinite",
-              "-moz-animation": "blink 0.7s infinite",
-              "animation": "blink 0.7s infinite",
-              "color": "@wordsColor"
-            },
-            ".mbr-figure": {
-              "border-radius": ".25rem",
-              "overflow": "hidden"
-            },
-            "@media (max-width: 767px)": {
-              ".typed-text,.mbr-section-subtitle, .mbr-section-text,.mbr-section-btn": {
-                "text-align": "center !important"
-              }
-            },
-            "@keyframes blink": {
-              "0%": {
-                "opacity": "1"
-              },
-              "50%": {
-                "opacity": "0"
-              },
-              "100%": {
-                "opacity": "1"
-              }
-            },
-            "@-webkit-keyframes blink": {
-              "0%": {
-                "opacity": "1"
-              },
-              "50%": {
-                "opacity": "0"
-              },
-              "100%": {
-                "opacity": "1"
-              }
-            },
-            "@-moz-keyframes blink": {
-              "0%": {
-                "opacity": "1"
-              },
-              "50%": {
-                "opacity": "0"
-              },
-              "100%": {
-                "opacity": "1"
-              }
-            }
-          },
-          "_name": "extHeader13",
-          "_customHTML": "<section class=\"extHeader\" group=\"Additional Blocks\" plugins=\"Typed\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <!-- <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked> -->\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Animated Text\" name=\"showAnimatedText\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"../_images/background1.jpg\" title=\"Background Image\" selected parallax>\n            <input type=\"color\" value=\"#ffffff\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://youtu.be/iM-NestDPNQ\" title=\"Background Video\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cad1ea\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay&&bg.type !== 'color'\">\n        <header codition=\"showSubtitle&&showAnimatedText\">Animated Text Settings</header>\n        <select title=\"Words Title\" name=\"wordsTitle\" condition=\"showSubtitle&&showAnimatedText\">\n            <option value=\"title1\" selected>Title 1</option>\n            <option value=\"title2\">Title 2</option>\n            <option value=\"title3\">Title 3</option>\n            <option value=\"text\">Text</option>\n            <option value=\"menu\">Menu</option>\n        </select>\n        <input type=\"color\" title=\"Words Color\" name=\"wordsColor\" value=\"#ff3366\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"range\" inline title=\"Type Speed\" name=\"typeSpeed\" min=\"1\" max=\"100\" value=\"50\" step=\"1\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"range\" inline title=\"Words Count\" name=\"wordsCount\" min=\"2\" max=\"5\" value=\"2\" step=\"1\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 1\" inline name=\"animatedWord1\" value=\"Here\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 2\" inline name=\"animatedWord2\" value=\"Now\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 3\" inline name=\"animatedWord3\" value=\"Lorem\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 2\">\n        <input type=\"text\" title=\"Word 4\" inline name=\"animatedWord4\" value=\"Lorem\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 3\">\n        <input type=\"text\" title=\"Word 5\" inline name=\"animatedWord5\" value=\"Ipsum\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 4\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center align-items-center\">\n            <div class=\"mbr-white col-md-12 col-lg-6 py-lg-0\" mbr-class=\"{'pt-4 order-2':reverseContent, 'pb-4':!reverseContent}\">\n                <div class=\"typed-text pb-3 align-left\" mbr-class=\"{'display-1':wordsTitle=='title1','display-2':wordsTitle=='title2',\n                                      'display-5':wordsTitle=='title3','display-7':wordsTitle=='text',\n                                      'display-4':wordsTitle=='menu'}\" mbr-if=\"showSubtitle\">\n                    <span mbr-text class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-subtitle, .typed-text\">\n                          Fruity is here.</span>\n                    <span mbr-if=\"showAnimatedText\">\n                      <span class=\"animated-element mbr-bold\" data-word1=\"{{animatedWord1}}\" data-word2=\"{{animatedWord2}}\" data-word3=\"{{animatedWord3}}\" data-word4=\"{{animatedWord4}}\" data-word5=\"{{animatedWord5}}\" data-speed=\"{{typeSpeed}}\" data-words=\"{{wordsCount}}\">\n                      </span>\n                    </span>\n                </div>\n                <p class=\"mbr-section-text mbr-fonts-style align-left\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">\n                    Build websites to present your business. Easy. Fast. Without coding. It's possible now.</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\" class=\"pt-3 mbr-section-btn align-left\"><a class=\"btn btn-md btn-primary\" type=\"submit\" data-app-placeholder=\"Type Text\">START NOW</a></div>\n            </div>\n              <center><div style=\"background-color: #1a1a1a; border-radius: 1mm; width: 550px;padding: 10px;\">\n    <!--[JS_CODE_0]\n    <div class=\"gcse-search\"></div>-->\n  <iframe src=\"https://duckduckgo.com/search.html?duck=yes&prefill=Search DuckDuckGo&bgcolor=1a1a1a\" style=\"overflow:hidden;margin:0;padding:0;width:450px;height:60px;\" frameborder=\"0\"></iframe>\n      </div></center>\n            <div class=\"col-lg-6 py-lg-0\" mbr-class=\"{'pb-2':reverseContent, 'pt-2':!reverseContent}\">\n                <div class=\"mbr-figure\">\n                    <img src=\"@PROJECT_PATH@/assets/images/fruity-logo-1024x1024.png\" alt=\"Fruity Logo\" title>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow&&fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [
-            "<script async src=\"https://cse.google.com/cse.js?cx=004479980935273677802:574giaqfa9q\"></script>"
-          ],
-          "_cid": "rXKWFw4XEN",
-          "_anchor": "extHeader13-4",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_customTemplate": true,
-          "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n\n<div>\n    <p class=\"display-1\">Promoted Content</p>\n<center><embed height=\"200mm\" src=\"https://www.borgcreative.com/bct/mk2-bar-fruity.html\" width=\"100%\"></center>\n</div>",
-          "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 20px;\n  color: #777;\n}",
-          "alias": "code-editor",
-          "_tags": [
-            "Extension"
-          ],
-          "_name": "pro.custom-html",
-          "_anchor": "custom-html-l",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": []
-        },
-        {
-          "_customTemplate": true,
-          "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n<center style=\"padding:5mm;\"><h2>Around the Web</h2></center>\n<div class=\"tickerv-wrap\" style=\"padding-bottom:10mm;\"><ul>\n    <li><a href=\"https://thegoodnow.org/sony-set-to-stream-ps5-games-showcase-on-september-16th-at-4pm-et/\">Sony set to stream PS5 Games showcase on September 16th at 4pm ET | The GOOD Now</a></li>\n\n    <li> <a href=\"https://therenderblog.blogspot.com/2020/10/review-raya-and-last-dragon-trailer.html\">REVIEW: \"Raya and the Last Dragon\" Trailer | The Render Blog</a></li>\n\n    <li><a href=\"https://www.crosswalk.com/faith/spiritual-life/how-can-i-be-slow-to-anger-in-todays-world.html\">How Can I Be 'Slow to Anger' in Today's World? | Crosswalk.com</a></li>\n\n    <li><a href=\"https://www.coffeewithjake.com/blog/hope-11-4-2020.html\">Hope | CWJ</a></li>\n\n</ul></div>",
-          "_customCSS": "/* Type valid CSS here */\n\n/* WRAPPER */\n.tickerv-wrap {\n  background: #eee;\n  box-sizing: content-box;\n  height: 50px; /* Take note of this */\n  overflow: hidden; /* Hide scrollbars */\n  padding: 10px;\n} \n\n/* TICKER ANIMATION */\n@keyframes tickerv {\n  0%   {margin-top: 0;}\n  /* Quite literally -ve height of wrapper */\n  25%  {margin-top: -26px;} /* 1 X 25 px */\n  50%  {margin-top: -52px;} /* 2 X 25 px */\n  75%  {margin-top: -78px;} /* 3 X 25 px */\n  100% {margin-top: 0;} /* Back to first line */\n}\n.tickerv-wrap ul {\n  padding: 0;\n  margin: 0;\n  list-style-type: none;\n  animation-name: tickerv; /* Loop through items */\n  animation-duration: 10s;\n  animation-iteration-count: infinite;\n  animation-timing-function: cubic-bezier(1, 0, .5, 0);\n}\n.tickerv-wrap ul:hover {\n  /* Pause on mouse hover */\n  animation-play-state: paused;\n}\n\n/* ITEMS */\n.tickerv-wrap ul li {\n    border-bottom: solid;\n    border-color: #cecece;\n  font-size: 25px;\n  line-height: 26px /* Same as wrapper height */\n}\np {\n  font-size: 60px;\n  color: #777;\n}\ndiv {\n    margin-bottom: 10mm;\n}",
-          "alias": "code-editor",
-          "_tags": [
-            "Extension"
-          ],
-          "_name": "pro.custom-html",
-          "_sourceTheme": "digitalm4",
-          "_anchor": "custom-html-m",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": []
-        }
-      ]
-    },
-    "page2.html": {
-      "settings": {
-        "title": "coconut-main",
-        "meta_descr": "",
-        "header_custom": "",
-        "footer_custom": "",
-        "html_before": "",
-        "order": 3
-      },
-      "components": [
-        {
-          "alias": "mobirise4-blocks/components",
-          "_isSecondary": true,
-          "typeCompatible": "type",
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 15px)",
-              "padding-bottom": "(@paddingBottom * 15px)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
-            ".mbr-section-title,.mbr-section-subtitle": {
-              "color": "#000000"
-            },
-            ".mbr-section-text": {
-              "color": "#232323"
-            },
-            ".mbr-text,.typed-text,.mbr-section-text": {
-              "letter-spacing": "0.03rem"
-            },
-            ".btn": {
-              "margin-left": "4px !important"
-            },
-            ".animated-element": {
-              "color": "@wordsColor"
-            },
-            ".typed-cursor": {
-              "opacity": "1",
-              "-webkit-animation": "blink 0.7s infinite",
-              "-moz-animation": "blink 0.7s infinite",
-              "animation": "blink 0.7s infinite",
-              "color": "@wordsColor"
-            },
-            ".mbr-figure": {
-              "border-radius": ".25rem",
-              "overflow": "hidden"
-            },
-            "@media (max-width: 767px)": {
-              ".typed-text,.mbr-section-subtitle, .mbr-section-text,.mbr-section-btn": {
-                "text-align": "center !important"
-              }
-            },
-            "@keyframes blink": {
-              "0%": {
-                "opacity": "1"
-              },
-              "50%": {
-                "opacity": "0"
-              },
-              "100%": {
-                "opacity": "1"
-              }
-            },
-            "@-webkit-keyframes blink": {
-              "0%": {
-                "opacity": "1"
-              },
-              "50%": {
-                "opacity": "0"
-              },
-              "100%": {
-                "opacity": "1"
-              }
-            },
-            "@-moz-keyframes blink": {
-              "0%": {
-                "opacity": "1"
-              },
-              "50%": {
-                "opacity": "0"
-              },
-              "100%": {
-                "opacity": "1"
-              }
-            }
-          },
-          "_name": "extHeader13",
-          "_customHTML": "<section class=\"extHeader\" group=\"Additional Blocks\" plugins=\"Typed\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <!-- <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked> -->\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Animated Text\" name=\"showAnimatedText\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"../_images/background1.jpg\" title=\"Background Image\" selected parallax>\n            <input type=\"color\" value=\"#ffffff\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://youtu.be/iM-NestDPNQ\" title=\"Background Video\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cad1ea\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay&&bg.type !== 'color'\">\n        <header codition=\"showSubtitle&&showAnimatedText\">Animated Text Settings</header>\n        <select title=\"Words Title\" name=\"wordsTitle\" condition=\"showSubtitle&&showAnimatedText\">\n            <option value=\"title1\" selected>Title 1</option>\n            <option value=\"title2\">Title 2</option>\n            <option value=\"title3\">Title 3</option>\n            <option value=\"text\">Text</option>\n            <option value=\"menu\">Menu</option>\n        </select>\n        <input type=\"color\" title=\"Words Color\" name=\"wordsColor\" value=\"#ff3366\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"range\" inline title=\"Type Speed\" name=\"typeSpeed\" min=\"1\" max=\"100\" value=\"50\" step=\"1\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"range\" inline title=\"Words Count\" name=\"wordsCount\" min=\"2\" max=\"5\" value=\"2\" step=\"1\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 1\" inline name=\"animatedWord1\" value=\"Here\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 2\" inline name=\"animatedWord2\" value=\"Now\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 3\" inline name=\"animatedWord3\" value=\"Lorem\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 2\">\n        <input type=\"text\" title=\"Word 4\" inline name=\"animatedWord4\" value=\"Lorem\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 3\">\n        <input type=\"text\" title=\"Word 5\" inline name=\"animatedWord5\" value=\"Ipsum\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 4\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center align-items-center\">\n            <div class=\"mbr-white col-md-12 col-lg-6 py-lg-0\" mbr-class=\"{'pt-4 order-2':reverseContent, 'pb-4':!reverseContent}\">\n                <div class=\"typed-text pb-3 align-left\" mbr-class=\"{'display-1':wordsTitle=='title1','display-2':wordsTitle=='title2',\n                                      'display-5':wordsTitle=='title3','display-7':wordsTitle=='text',\n                                      'display-4':wordsTitle=='menu'}\" mbr-if=\"showSubtitle\">\n                    <span mbr-text class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-subtitle, .typed-text\">\n                          Fruity is here.</span>\n                    <span mbr-if=\"showAnimatedText\">\n                      <span class=\"animated-element mbr-bold\" data-word1=\"{{animatedWord1}}\" data-word2=\"{{animatedWord2}}\" data-word3=\"{{animatedWord3}}\" data-word4=\"{{animatedWord4}}\" data-word5=\"{{animatedWord5}}\" data-speed=\"{{typeSpeed}}\" data-words=\"{{wordsCount}}\">\n                      </span>\n                    </span>\n                </div>\n                <p class=\"mbr-section-text mbr-fonts-style align-left\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">\n                    Build websites to present your business. Easy. Fast. Without coding. It's possible now.</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\" class=\"pt-3 mbr-section-btn align-left\"><a class=\"btn btn-md btn-primary\" type=\"submit\" data-app-placeholder=\"Type Text\">START NOW</a></div>\n            </div>\n              <center><div style=\"background-color: #1a1a1a; border-radius: 1mm; width: 550px;padding: 10px;\">\n    <!--[JS_CODE_0]\n    <div class=\"gcse-search\"></div>-->\n  <iframe src=\"https://duckduckgo.com/search.html?duck=yes&prefill=Search DuckDuckGo&bgcolor=1a1a1a\" style=\"overflow:hidden;margin:0;padding:0;width:450px;height:60px;\" frameborder=\"0\"></iframe>\n      </div></center>\n            <div class=\"col-lg-6 py-lg-0\" mbr-class=\"{'pb-2':reverseContent, 'pt-2':!reverseContent}\">\n                <div class=\"mbr-figure\">\n                    <img src=\"@PROJECT_PATH@/assets/images/coconut-logo-1024x1024.png\" alt=\"Mobirise\" title>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow&&fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [
-            "<script async src=\"https://cse.google.com/cse.js?cx=004479980935273677802:574giaqfa9q\"></script>"
-          ],
-          "_cid": "rXL0JGkcIY",
-          "_anchor": "extHeader13-9",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        }
-      ]
-    },
     "fruityhelp.html": {
       "settings": {
         "title": "fruity-help",
@@ -988,6 +749,245 @@
           "_customHTML": "<section group=\"Headers\" class=\"header02\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"20\" step=\"1\" value=\"15\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"20\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n        <header>Show / Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Icon\" name=\"showIcon\">\n        <hr>\n        <input type=\"color\" title=\"Icon Color\" name=\"iconColor\" value=\"#848abd\" selected condition=\"showIcon\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/fruit-1-2000x3000.jpeg\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#000000\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container align-center\">\n        <div class=\"row justify-content-center\">\n            <div class=\"mbr-white col-md-12 col-lg-9\">\n                <div class=\"icon-wrap\">\n                    <span mbr-icon class=\"mbr-iconfont mbri-rocket\" mbr-if=\"showIcon\"></span>\n\n                </div>\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" data-app-selector=\".mbr-section-title, .icon-wrap, .mbr-section-btn\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    \"It's something else.\"</h1>\n                <p class=\"mbr-text pb-3 mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in fermentum tellus. Etiam\n                    turpis metus, mattis vel ullamcorper sed, convallis eget tellus. Aliquam luctus nisl justo, iaculis\n                    maximus tortor hendrerit eget. Quisque vehicula nisl eget tincidunt auctor.</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-lg btn-white\" href=\"https://share.hsforms.com/1XT3lzIehS8S5Wmvrqo_6BQ3kym0\" data-app-placeholder=\"Type Text\">Report a bug</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "s6D5UhfKFO",
           "_anchor": "header02-k",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "title": "fruity-main",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 2
+      },
+      "components": [
+        {
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title,.mbr-section-subtitle": {
+              "color": "#000000"
+            },
+            ".mbr-section-text": {
+              "color": "#232323"
+            },
+            ".mbr-text,.typed-text,.mbr-section-text": {
+              "letter-spacing": "0.03rem"
+            },
+            ".btn": {
+              "margin-left": "4px !important"
+            },
+            ".animated-element": {
+              "color": "@wordsColor"
+            },
+            ".typed-cursor": {
+              "opacity": "1",
+              "-webkit-animation": "blink 0.7s infinite",
+              "-moz-animation": "blink 0.7s infinite",
+              "animation": "blink 0.7s infinite",
+              "color": "@wordsColor"
+            },
+            ".mbr-figure": {
+              "border-radius": ".25rem",
+              "overflow": "hidden"
+            },
+            "@media (max-width: 767px)": {
+              ".typed-text,.mbr-section-subtitle, .mbr-section-text,.mbr-section-btn": {
+                "text-align": "center !important"
+              }
+            },
+            "@keyframes blink": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "opacity": "1"
+              }
+            },
+            "@-webkit-keyframes blink": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "opacity": "1"
+              }
+            },
+            "@-moz-keyframes blink": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "opacity": "1"
+              }
+            }
+          },
+          "_name": "extHeader13",
+          "_customHTML": "<section class=\"extHeader\" group=\"Additional Blocks\" plugins=\"Typed\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"3\" condition=\"fullScreen == false\">\n        <!-- <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked> -->\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Animated Text\" name=\"showAnimatedText\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"../_images/background1.jpg\" title=\"Background Image\" selected parallax>\n            <input type=\"color\" value=\"#ffffff\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://youtu.be/iM-NestDPNQ\" title=\"Background Video\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cad1ea\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay&&bg.type !== 'color'\">\n        <header codition=\"showSubtitle&&showAnimatedText\">Animated Text Settings</header>\n        <select title=\"Words Title\" name=\"wordsTitle\" condition=\"showSubtitle&&showAnimatedText\">\n            <option value=\"title1\" selected>Title 1</option>\n            <option value=\"title2\">Title 2</option>\n            <option value=\"title3\">Title 3</option>\n            <option value=\"text\">Text</option>\n            <option value=\"menu\">Menu</option>\n        </select>\n        <input type=\"color\" title=\"Words Color\" name=\"wordsColor\" value=\"#ff3366\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"range\" inline title=\"Type Speed\" name=\"typeSpeed\" min=\"1\" max=\"100\" value=\"50\" step=\"1\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"range\" inline title=\"Words Count\" name=\"wordsCount\" min=\"2\" max=\"5\" value=\"2\" step=\"1\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 1\" inline name=\"animatedWord1\" value=\"Here\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 2\" inline name=\"animatedWord2\" value=\"Now\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 3\" inline name=\"animatedWord3\" value=\"Lorem\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 2\">\n        <input type=\"text\" title=\"Word 4\" inline name=\"animatedWord4\" value=\"Lorem\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 3\">\n        <input type=\"text\" title=\"Word 5\" inline name=\"animatedWord5\" value=\"Ipsum\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 4\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center align-items-center\">\n            <div class=\"mbr-white col-md-12 col-lg-6 py-lg-0\" mbr-class=\"{'pt-4 order-2':reverseContent, 'pb-4':!reverseContent}\">\n                <div class=\"typed-text pb-3 align-left\" mbr-class=\"{'display-1':wordsTitle=='title1','display-2':wordsTitle=='title2',\n                                      'display-5':wordsTitle=='title3','display-7':wordsTitle=='text',\n                                      'display-4':wordsTitle=='menu'}\" mbr-if=\"showSubtitle\">\n                    <span mbr-text class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-subtitle, .typed-text\">\n                          Fruity is here.</span>\n                    <span mbr-if=\"showAnimatedText\">\n                      <span class=\"animated-element mbr-bold\" data-word1=\"{{animatedWord1}}\" data-word2=\"{{animatedWord2}}\" data-word3=\"{{animatedWord3}}\" data-word4=\"{{animatedWord4}}\" data-word5=\"{{animatedWord5}}\" data-speed=\"{{typeSpeed}}\" data-words=\"{{wordsCount}}\">\n                      </span>\n                    </span>\n                </div>\n                <p class=\"mbr-section-text mbr-fonts-style align-left\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">\n                    Build websites to present your business. Easy. Fast. Without coding. It's possible now.</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\" class=\"pt-3 mbr-section-btn align-left\"><a class=\"btn btn-md btn-primary\" type=\"submit\" data-app-placeholder=\"Type Text\">START NOW</a></div>\n            </div>\n              <center><div style=\"background-color: #1a1a1a; border-radius: 1mm; width: 550px;padding: 10px;\">\n    <!--[JS_CODE_0]\n    <div class=\"gcse-search\"></div>-->\n  <iframe src=\"https://duckduckgo.com/search.html?duck=yes&prefill=Search DuckDuckGo&bgcolor=1a1a1a\" style=\"overflow:hidden;margin:0;padding:0;width:450px;height:60px;\" frameborder=\"0\"></iframe>\n      </div></center>\n            <div class=\"col-lg-6 py-lg-0\" mbr-class=\"{'pb-2':reverseContent, 'pt-2':!reverseContent}\">\n                <div class=\"mbr-figure\">\n                    <img src=\"@PROJECT_PATH@/assets/images/fruity-logo-1024x1024.png\" alt=\"Fruity Logo\" title>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow&&fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [
+            "<script async src=\"https://cse.google.com/cse.js?cx=004479980935273677802:574giaqfa9q\"></script>"
+          ],
+          "_cid": "rXKWFw4XEN",
+          "_anchor": "extHeader13-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "<!-- Type valid HTML here -->\n\n<div>\n    <p class=\"display-1\">Promoted Content</p>\n<center><embed height=\"300mm\" src=\"https://www.borgcreative.com/bct/mk2-bar-fruity.html\" width=\"100%\"></center>\n</div>",
+          "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 20px;\n  color: #777;\n}",
+          "alias": "code-editor",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "pro.custom-html",
+          "_anchor": "custom-html-l",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
+        },
+        {
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "<!-- Type valid HTML here -->\n<center style=\"padding:5mm;\"><h2>Around the Web</h2></center>\n<div class=\"tickerv-wrap\" style=\"padding-bottom:10mm;\"><ul>\n    <li><a href=\"https://thegoodnow.org/sony-set-to-stream-ps5-games-showcase-on-september-16th-at-4pm-et/\">Sony set to stream PS5 Games showcase on September 16th at 4pm ET | The GOOD Now</a></li>\n\n    <li> <a href=\"https://therenderblog.blogspot.com/2020/10/review-raya-and-last-dragon-trailer.html\">REVIEW: \"Raya and the Last Dragon\" Trailer | The Render Blog</a></li>\n\n    <li><a href=\"https://www.crosswalk.com/faith/spiritual-life/how-can-i-be-slow-to-anger-in-todays-world.html\">How Can I Be 'Slow to Anger' in Today's World? | Crosswalk.com</a></li>\n\n    <li><a href=\"https://www.coffeewithjake.com/blog/hope-11-4-2020.html\">Hope | CWJ</a></li>\n\n</ul></div>",
+          "_customCSS": "/* Type valid CSS here */\n\n/* WRAPPER */\n.tickerv-wrap {\n  background: #eee;\n  box-sizing: content-box;\n  height: 50px; /* Take note of this */\n  overflow: hidden; /* Hide scrollbars */\n  padding: 10px;\n} \n\n/* TICKER ANIMATION */\n@keyframes tickerv {\n  0%   {margin-top: 0;}\n  /* Quite literally -ve height of wrapper */\n  25%  {margin-top: -26px;} /* 1 X 25 px */\n  50%  {margin-top: -52px;} /* 2 X 25 px */\n  75%  {margin-top: -78px;} /* 3 X 25 px */\n  100% {margin-top: 0;} /* Back to first line */\n}\n.tickerv-wrap ul {\n  padding: 0;\n  margin: 0;\n  list-style-type: none;\n  animation-name: tickerv; /* Loop through items */\n  animation-duration: 10s;\n  animation-iteration-count: infinite;\n  animation-timing-function: cubic-bezier(1, 0, .5, 0);\n}\n.tickerv-wrap ul:hover {\n  /* Pause on mouse hover */\n  animation-play-state: paused;\n}\n\n/* ITEMS */\n.tickerv-wrap ul li {\n    border-bottom: solid;\n    border-color: #cecece;\n  font-size: 25px;\n  line-height: 26px /* Same as wrapper height */\n}\np {\n  font-size: 60px;\n  color: #777;\n}\ndiv {\n    margin-bottom: 10mm;\n}",
+          "alias": "code-editor",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "pro.custom-html",
+          "_sourceTheme": "digitalm4",
+          "_anchor": "custom-html-m",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": []
+        }
+      ]
+    },
+    "page2.html": {
+      "settings": {
+        "title": "coconut-main",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "order": 3
+      },
+      "components": [
+        {
+          "alias": "mobirise4-blocks/components",
+          "_isSecondary": true,
+          "typeCompatible": "type",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-section-title,.mbr-section-subtitle": {
+              "color": "#000000"
+            },
+            ".mbr-section-text": {
+              "color": "#232323"
+            },
+            ".mbr-text,.typed-text,.mbr-section-text": {
+              "letter-spacing": "0.03rem"
+            },
+            ".btn": {
+              "margin-left": "4px !important"
+            },
+            ".animated-element": {
+              "color": "@wordsColor"
+            },
+            ".typed-cursor": {
+              "opacity": "1",
+              "-webkit-animation": "blink 0.7s infinite",
+              "-moz-animation": "blink 0.7s infinite",
+              "animation": "blink 0.7s infinite",
+              "color": "@wordsColor"
+            },
+            ".mbr-figure": {
+              "border-radius": ".25rem",
+              "overflow": "hidden"
+            },
+            "@media (max-width: 767px)": {
+              ".typed-text,.mbr-section-subtitle, .mbr-section-text,.mbr-section-btn": {
+                "text-align": "center !important"
+              }
+            },
+            "@keyframes blink": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "opacity": "1"
+              }
+            },
+            "@-webkit-keyframes blink": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "opacity": "1"
+              }
+            },
+            "@-moz-keyframes blink": {
+              "0%": {
+                "opacity": "1"
+              },
+              "50%": {
+                "opacity": "0"
+              },
+              "100%": {
+                "opacity": "1"
+              }
+            }
+          },
+          "_name": "extHeader13",
+          "_customHTML": "<section class=\"extHeader\" group=\"Additional Blocks\" plugins=\"Typed\" data-bg-video=\"{{bg.type == 'video'&&bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" condition=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <!-- <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked> -->\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Animated Text\" name=\"showAnimatedText\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Reverse Content\" name=\"reverseContent\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" value=\"../_images/background1.jpg\" title=\"Background Image\" selected parallax>\n            <input type=\"color\" value=\"#ffffff\" title=\"Background Color\">\n            <input type=\"video\" value=\"https://youtu.be/iM-NestDPNQ\" title=\"Background Video\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cad1ea\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay&&bg.type !== 'color'\">\n        <header codition=\"showSubtitle&&showAnimatedText\">Animated Text Settings</header>\n        <select title=\"Words Title\" name=\"wordsTitle\" condition=\"showSubtitle&&showAnimatedText\">\n            <option value=\"title1\" selected>Title 1</option>\n            <option value=\"title2\">Title 2</option>\n            <option value=\"title3\">Title 3</option>\n            <option value=\"text\">Text</option>\n            <option value=\"menu\">Menu</option>\n        </select>\n        <input type=\"color\" title=\"Words Color\" name=\"wordsColor\" value=\"#ff3366\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"range\" inline title=\"Type Speed\" name=\"typeSpeed\" min=\"1\" max=\"100\" value=\"50\" step=\"1\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"range\" inline title=\"Words Count\" name=\"wordsCount\" min=\"2\" max=\"5\" value=\"2\" step=\"1\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 1\" inline name=\"animatedWord1\" value=\"Here\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 2\" inline name=\"animatedWord2\" value=\"Now\" condition=\"showSubtitle&&showAnimatedText\">\n        <input type=\"text\" title=\"Word 3\" inline name=\"animatedWord3\" value=\"Lorem\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 2\">\n        <input type=\"text\" title=\"Word 4\" inline name=\"animatedWord4\" value=\"Lorem\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 3\">\n        <input type=\"text\" title=\"Word 5\" inline name=\"animatedWord5\" value=\"Ipsum\" condition=\"showSubtitle&amp;&amp;showAnimatedText&amp;&amp;wordsCount > 4\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center align-items-center\">\n            <div class=\"mbr-white col-md-12 col-lg-6 py-lg-0\" mbr-class=\"{'pt-4 order-2':reverseContent, 'pb-4':!reverseContent}\">\n                <div class=\"typed-text pb-3 align-left\" mbr-class=\"{'display-1':wordsTitle=='title1','display-2':wordsTitle=='title2',\n                                      'display-5':wordsTitle=='title3','display-7':wordsTitle=='text',\n                                      'display-4':wordsTitle=='menu'}\" mbr-if=\"showSubtitle\">\n                    <span mbr-text class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-subtitle, .typed-text\">\n                          Fruity is here.</span>\n                    <span mbr-if=\"showAnimatedText\">\n                      <span class=\"animated-element mbr-bold\" data-word1=\"{{animatedWord1}}\" data-word2=\"{{animatedWord2}}\" data-word3=\"{{animatedWord3}}\" data-word4=\"{{animatedWord4}}\" data-word5=\"{{animatedWord5}}\" data-speed=\"{{typeSpeed}}\" data-words=\"{{wordsCount}}\">\n                      </span>\n                    </span>\n                </div>\n                <p class=\"mbr-section-text mbr-fonts-style align-left\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-section-text,.mbr-section-btn\">\n                    Build websites to present your business. Easy. Fast. Without coding. It's possible now.</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\" class=\"pt-3 mbr-section-btn align-left\"><a class=\"btn btn-md btn-primary\" type=\"submit\" data-app-placeholder=\"Type Text\">START NOW</a></div>\n            </div>\n              <center><div style=\"background-color: #1a1a1a; border-radius: 1mm; width: 550px;padding: 10px;\">\n    <!--[JS_CODE_0]\n    <div class=\"gcse-search\"></div>-->\n  <iframe src=\"https://duckduckgo.com/search.html?duck=yes&prefill=Search DuckDuckGo&bgcolor=1a1a1a\" style=\"overflow:hidden;margin:0;padding:0;width:450px;height:60px;\" frameborder=\"0\"></iframe>\n      </div></center>\n            <div class=\"col-lg-6 py-lg-0\" mbr-class=\"{'pb-2':reverseContent, 'pt-2':!reverseContent}\">\n                <div class=\"mbr-figure\">\n                    <img src=\"@PROJECT_PATH@/assets/images/coconut-logo-1024x1024.png\" alt=\"Mobirise\" title>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow&&fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [
+            "<script async src=\"https://cse.google.com/cse.js?cx=004479980935273677802:574giaqfa9q\"></script>"
+          ],
+          "_cid": "rXL0JGkcIY",
+          "_anchor": "extHeader13-9",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
