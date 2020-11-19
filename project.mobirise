@@ -52,7 +52,7 @@
     "cookiesAlert": false,
     "gdpr": false,
     "pwa-switcher": false,
-    "uniqCompNum": 23,
+    "uniqCompNum": 26,
     "versionPublish": "5.2.0",
     "screenshot": "screenshot.png"
   },
@@ -862,7 +862,7 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n\n<div>\n    <p class=\"display-1\">Promoted Content</p>\n<center><embed height=\"300mm\" src=\"https://www.borgcreative.com/bct/mk2-bar-fruity.html\" width=\"100%\"></center>\n</div>",
+          "_customHTML": "<!-- Type valid HTML here -->\n\n<div>\n    <p class=\"display-1\">Promoted Content</p>\n<center><embed height=\"400mm\" src=\"https://www.borgcreative.com/bct/mk2-bar-fruity.html\" width=\"100%\"></center>\n</div>",
           "_customCSS": "/* Type valid CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 20px;\n  color: #777;\n}",
           "alias": "code-editor",
           "_tags": [
@@ -874,19 +874,30 @@
           "_JSplaceholders": []
         },
         {
-          "_customTemplate": true,
-          "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n<center style=\"padding:5mm;\"><h2>Around the Web</h2></center>\n<div class=\"tickerv-wrap\" style=\"padding-bottom:10mm;\"><ul>\n    <li><a href=\"https://thegoodnow.org/sony-set-to-stream-ps5-games-showcase-on-september-16th-at-4pm-et/\">Sony set to stream PS5 Games showcase on September 16th at 4pm ET | The GOOD Now</a></li>\n\n    <li> <a href=\"https://therenderblog.blogspot.com/2020/10/review-raya-and-last-dragon-trailer.html\">REVIEW: \"Raya and the Last Dragon\" Trailer | The Render Blog</a></li>\n\n    <li><a href=\"https://www.crosswalk.com/faith/spiritual-life/how-can-i-be-slow-to-anger-in-todays-world.html\">How Can I Be 'Slow to Anger' in Today's World? | Crosswalk.com</a></li>\n\n    <li><a href=\"https://www.coffeewithjake.com/blog/hope-11-4-2020.html\">Hope | CWJ</a></li>\n\n</ul></div>",
-          "_customCSS": "/* Type valid CSS here */\n\n/* WRAPPER */\n.tickerv-wrap {\n  background: #eee;\n  box-sizing: content-box;\n  height: 50px; /* Take note of this */\n  overflow: hidden; /* Hide scrollbars */\n  padding: 10px;\n} \n\n/* TICKER ANIMATION */\n@keyframes tickerv {\n  0%   {margin-top: 0;}\n  /* Quite literally -ve height of wrapper */\n  25%  {margin-top: -26px;} /* 1 X 25 px */\n  50%  {margin-top: -52px;} /* 2 X 25 px */\n  75%  {margin-top: -78px;} /* 3 X 25 px */\n  100% {margin-top: 0;} /* Back to first line */\n}\n.tickerv-wrap ul {\n  padding: 0;\n  margin: 0;\n  list-style-type: none;\n  animation-name: tickerv; /* Loop through items */\n  animation-duration: 10s;\n  animation-iteration-count: infinite;\n  animation-timing-function: cubic-bezier(1, 0, .5, 0);\n}\n.tickerv-wrap ul:hover {\n  /* Pause on mouse hover */\n  animation-play-state: paused;\n}\n\n/* ITEMS */\n.tickerv-wrap ul li {\n    border-bottom: solid;\n    border-color: #cecece;\n  font-size: 25px;\n  line-height: 26px /* Same as wrapper height */\n}\np {\n  font-size: 60px;\n  color: #777;\n}\ndiv {\n    margin-bottom: 10mm;\n}",
-          "alias": "code-editor",
+          "loadsvg": "@PROJECT_PATH@/assets/images/loading.svg",
+          "_params": {
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "postToLoad": 3,
+            "facebookToken": "",
+            "facebook": "",
+            "twitter": "borgcreative",
+            "youtube": "",
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgImageRadio": false,
+            "bgImage": "@ADDONS_PATH@/social-feed/feed/assets/comments_bg.jpg",
+            "overlay": true,
+            "overlayColor": "#7e9b9f",
+            "overlayOpacity": 0.6
+          },
+          "alias": "social-feed",
           "_tags": [
             "Extension"
           ],
-          "_name": "pro.custom-html",
+          "_name": "feed",
           "_sourceTheme": "digitalm4",
-          "_anchor": "custom-html-m",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": []
+          "_anchor": "feed-p"
         }
       ]
     },
