@@ -128,7 +128,7 @@ function openitem1(){
   var z1 = document.getElementById("item1input").value;
   
   
-  document.getElementById("appwindow").src = z1;
+  document.getElementById("item1link").href = z1;
   console.log(x1)
   
   
@@ -138,7 +138,17 @@ function openitem2(){
   var z2 = document.getElementById("item2input").value;
   
   
-  document.getElementById("appwindow").src = z2;
+  document.getElementById("item2link").href = z2;
+  console.log(x1)
+  
+  
+}
+
+function openitem3(){
+  var z3 = document.getElementById("item3input").value;
+  
+  
+  document.getElementById("item3link").href = z3;
   console.log(x1)
   
   
