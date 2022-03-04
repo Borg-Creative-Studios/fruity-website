@@ -122,13 +122,17 @@ function loaddata(){
   document.getElementById("item2input").value = localStorage["item2input"]
   document.getElementById("item3input").value = localStorage["item3input"]
 
+  document.getElementById("link1").href = localStorage["item1input"]
+  document.getElementById("link2").href = localStorage["item2input"]
+  document.getElementById("link3").href = localStorage["item3input"]
+
 }
 
 function openitem1(){
   var z1 = document.getElementById("item1input").value;
   
   
-  document.getElementById("item1link").href = z1;
+  document.getElementById("appwindow").src = z1;
   console.log(x1)
   
   
@@ -138,7 +142,7 @@ function openitem2(){
   var z2 = document.getElementById("item2input").value;
   
   
-  document.getElementById("item2link").href = z2;
+  document.getElementById("appwindow").src = z2;
   console.log(x1)
   
   
@@ -148,7 +152,7 @@ function openitem3(){
   var z3 = document.getElementById("item3input").value;
   
   
-  document.getElementById("item3link").href = z3;
+  document.getElementById("appwindow").src = z3;
   console.log(x1)
   
   
